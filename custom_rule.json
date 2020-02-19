@@ -1,0 +1,18 @@
+{
+"resource_type": "AWS.EC2.Instance",
+"rule_text":"approved_amis = { \n
+  \"ami-04b762b4289fba92b\",\n
+  \"ami-acc50ecc\",\n
+  \"ami-082b5a644766e0e6f\",\n
+  \"ami-doesthiswork\",\n
+} \n
+
+allow { \n
+    ami = input.ami \n  
+    approved_amis[ami] \n 
+  }\n"
+}
+
+
+
+
