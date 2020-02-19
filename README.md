@@ -5,8 +5,8 @@ Using OPA, Fugue gives customers the ability to write custom rules to check for 
 
 What we've done is use a simple example of a customer that needs to update an approved whitelist of Amazon Machine Images (AMIs).  
 Here is the policy as code that we are using:
-```# AWS.EC2.Instance
-# All EC2 instances must use an approved AMI. Replace the AMI ID below with your AMI ID.
+`# AWS.EC2.Instance
+`# All EC2 instances must use an approved AMI. Replace the AMI ID below with your AMI ID.
 
 approved_amis = {
   'ami-04b762b4289fba92b'
@@ -15,7 +15,7 @@ approved_amis = {
 allow {
     ami = input.ami  # Pull out AMIs
     approved_amis[ami]  # Assert
-}
+}`
 
 This code tells Fugue to inspect all of the deployed AMIs and to flag the AMIs that are not on the approved whitelist.  The customer can then see to it that all AMIs that are in violation are redeployed.
 
