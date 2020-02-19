@@ -15,7 +15,7 @@ approved_amis = {
 allow {
     ami = input.ami  # Pull out AMIs
     approved_amis[ami]  # Assert
-}```
+}
 
 This code tells Fugue to inspect all of the deployed AMIs and to flag the AMIs that are not on the approved whitelist.  The customer can then see to it that all AMIs that are in violation are redeployed.
 
