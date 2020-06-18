@@ -3,6 +3,7 @@
 
 approved_amis = {
   'ami-04b762b4289fba92b'
+  'ami-testami'
 }
 
 allow {
